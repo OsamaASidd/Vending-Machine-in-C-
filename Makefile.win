@@ -1,0 +1,28 @@
+# Project: PF project 20K-0216, 20K-0215, 20K-0193
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = "PF\ project\ 20K-0216,\ 20K-0215,\ 20K-0193.o"
+LINKOBJ  = "PF project 20K-0216, 20K-0215, 20K-0193.o"
+LIBS     = -L"E:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"E:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"E:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"E:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"E:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"E:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"E:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"E:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"E:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = "PF project 20K-0216, 20K-0215, 20K-0193.exe"
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+"PF\ project\ 20K-0216,\ 20K-0215,\ 20K-0193.o": PF\ project\ 20K-0216,\ 20K-0215,\ 20K-0193.c
+	$(CC) -c "PF project 20K-0216, 20K-0215, 20K-0193.c" -o "PF project 20K-0216, 20K-0215, 20K-0193.o" $(CFLAGS)
